@@ -10,6 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+jobs:
+- job: job1
+  step:
+  - script: echo job1 - hello,world!
+    desplayname: 'Run a one line sript'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
